@@ -113,13 +113,13 @@ body{
   }
 
 .site-title {
-    font-size: 4em; /*em é uma fonte relativa*/
+    font-size: 3.75em; /*em é uma fonte relativa*/
     font-family: 'Patrick Hand', cursive;
   }
 
   @media (min-width: 400px) {
     .site-title{
-      font-size: 10px;
+      font-size: 5em;
     }
   }
 
