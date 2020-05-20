@@ -112,10 +112,18 @@ body{
     /*se colocar fontsize aqui, o valor fica fixo e o @media nao tem efeito sobre*/
   }
 
-  .site-title {
-    font-size: 5em; /*em é uma fonte relativa*/
+.site-title {
+    font-size: 4em; /*em é uma fonte relativa*/
     font-family: 'Patrick Hand', cursive;
   }
+
+  @media (min-width: 400px) {
+    .site-title{
+      font-size: 10px;
+    }
+  }
+
+        
   .descricao {
     font-size: 1.5em;
     font-family: 'Patrick Hand', cursive;
@@ -161,7 +169,7 @@ body{
   .sobre p{
       color: rgb(23, 0, 87);
       /*text-indent: 2em;*/
-      font-size: 1.5em;
+      font-size: .8em;
       margin-bottom: 2em;
       text-align: justify;
       font-family: 'Roboto Condensed', sans-serif;
@@ -173,6 +181,13 @@ body{
     text-decoration: underline;
     font-family: 'Roboto Condensed', sans-serif;
   }
+
+  @media (min-width: 400px) {
+    .sobre p{
+      font-size: 1.5em;
+    }
+  }
+
 
   .sobre .avatar{
     float: right;
