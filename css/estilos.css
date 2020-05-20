@@ -1,0 +1,329 @@
+               /*reset do browser, mas existem diferentes formas. Google tem varios*/
+* {            /*o '*' é oo mais fraco dos marcadores, por isso coloca em primeiro e representa todos*/
+  margin: 0;   /*ao utilizar o valor 0, eu posso definir para cada elemento o valor*/
+  padding: 0;  /*o navegador coloca valores automaticos quando nao definidos*/
+  box-sizing: border-box;  /*espaçamento começa a contar a partir da borda interna da caixa*/
+ }
+
+body{
+    height: 100vh;
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color:rgb(23, 0, 87);
+  }
+
+  .background-image {
+    background-image: url('../img/fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #464646;
+    height: 100vh;
+    display: block;
+    filter: blur(1px) grayscale(00%) opacity(40%);
+     left: 0;
+    position: fixed;
+    right: 0;
+    z-index: -1;
+  }
+
+  /*se a tela tiver pelo menos de 400px, carrega estes estilos*/
+  @media (min-widht: 400px) {
+    body{
+      font-size: 14px;
+    }
+  }
+
+  @media (min-widht: 600px) {
+    body{
+      font-size: 18px;
+    }
+  }
+  /*chaamado breakpoint, como se fosse o valor final*/
+  @media (min-widht: 1200px) {
+    body{
+      font-size: 20px;
+    }
+  }
+
+ header {
+    display: flex;
+    height: 100vh;   /*viewportheight*/
+    justify-content: center;
+    align-items: center;
+ }
+  
+  .menu{
+    background-color: rgb(218, 208, 255);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  .menu a{
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.2s, color 0.3s;   /*pode omitir o elemento, valendo pra todos*/
+  }
+
+  .menu a:hover{
+    background-color: rgb(23, 0, 87);
+    color: rgb(218, 208, 255);
+    border-radius: 20%;
+  }
+
+  a {   /*a tag a não consegue receber o pading, é do tamanho do texto*/
+    color: rgb(23, 0, 87);
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  a:hover {   /*quando passar o mouse em cima, assume este padrao*/
+    text-decoration: underline; 
+  }
+
+  .titulo {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: /*1s entra como delay*/ linear 0.3s animacaotitulo forwards;
+  }
+
+  @keyframes animacaotitulo {
+    100%{
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .site-subtitle, 
+  .site-title {
+    color: rgb(23, 0, 87);  
+    text-align: center;
+    /*se colocar fontsize aqui, o valor fica fixo e o @media nao tem efeito sobre*/
+  }
+
+  .site-title {
+    font-size: 5em; /*em é uma fonte relativa*/
+    font-family: 'Patrick Hand', cursive;
+  }
+  .descricao {
+    font-size: 1.5em;
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+    padding-top: 2em;
+
+  }
+
+  .site-subtitle {
+    font-family: 'Patrick Hand', cursive;
+    line-height: 2em;
+    font-size: 2em;
+  }
+
+  .sobre,
+  .portfolio{
+    padding: 4em;
+    min-height: 100vh;  /*altura minima*/
+  }
+
+  .contato{
+    padding: 3em;
+    min-height: 100vh;  /*altura minima*/
+  }
+  
+  @media (min-width: 1200px) {
+    .container{
+      margin-left :auto;
+      margin-right: auto;
+      max-width: 1200px;
+    }
+  }
+  
+  .sobre h2,
+  .contato h2, 
+  .portfolio h2{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2em;
+    color: rgb(23, 0, 87);
+    margin-bottom: 1.5em; /*margin apenas para o lado que quero*/
+  }
+
+  .sobre p{
+      color: rgb(23, 0, 87);
+      /*text-indent: 2em;*/
+      font-size: 1.5em;
+      margin-bottom: 2em;
+      text-align: justify;
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .sobre a{
+    color: rgb(23, 0, 87);
+    font-size: 1em; 
+    text-decoration: underline;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .sobre .avatar{
+    float: right;
+    margin-left: 2em;
+  }
+
+  .img-avatar{
+    height: 200px;
+    width: 200px;
+    clip-path: 0;
+
+  }
+  .portfolio .grid{
+    display: grid;  /* nao força as colunas, vc decide qtas*/
+    gap: 2em;     /*espaçamento entre cada coluna do grid*/
+    grid-template-columns: 200px; 
+    justify-content: center;  
+  }
+  
+  @media (min-width: 560px){
+    .portfolio .grid {
+      grid-template-columns: 240px 240px; /*colocar o tanto de colunas*/
+      justify-content: center;    
+    }
+  }
+  
+  @media (min-width: 1200px){
+    .portfolio .grid {
+      grid-template-columns: repeat(4, 240px); /*colocar o tanto de colunas*/
+      align-content: 100vh; /*x align-itens*/
+      justify-content: center;
+      height: calc(100vh - 4em - 48px - 1.5em);
+    }
+  }
+
+
+  /*.img-portfolio:hover {
+    transform: scale(1.1) rotate(45deg);
+    transition: transform 500ms;
+  } */
+  .flipcard{
+    height: 180px;
+    perspective: 1000px;
+  }
+
+
+  .card {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 2s;
+  }
+
+  .flipcard:hover .card{
+    transform:rotateY(180deg);
+
+  }
+
+  .card p{
+    color: rgb(218, 208, 255);
+    align-content: space-around;
+    flex-direction: column;
+    font-size: 20px;
+
+  }
+  
+  /*.card a{
+    align-content: space-between;
+    flex-direction: column;
+    font-size: 20px;
+  }*/
+
+  .card-front,
+  .card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .card-back{
+    display: flex;
+    background-color: rgb(23, 0, 87);
+    height: 180px;
+    width: 100%;
+    transform: rotateY(180deg);
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+
+  .portfolio figure {
+    text-align: center;
+  } 
+
+  .img-portfolio{
+    height: 180px;
+    width: 100%;
+    object-fit: cover; /*centraliza a imagem*/
+    object-position: center;
+    /*border-radius: 50%;*/ 
+    transform: scale(1);
+
+  }
+
+  .contato .icons{
+    text-align: center;
+  }
+
+  .contato a {
+    color:rgb(23, 0, 87);
+    font-size: 5em;
+    padding: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 20px rgb(115, 86, 218);
+    transition: text-shadow 1s;
+  }
+  
+  .contato p{
+    padding: 5px;
+    font-size: 25px;  
+    text-align: center;
+    padding-top: 30px;
+  }
+
+
+  @media (max-width: 380px){
+    .contato{
+      padding: 2em;
+    }
+
+    .contato a {
+      padding: 10px;
+      font-size: 4em;
+    }
+    .contato p{
+      padding: 5px;
+      font-size:16px;  
+      text-align: center;
+    }
+  }
+  /*@media (min-width: 1200px; ){
+    .img-portfolio {
+      height: auto;
+      width: 100%;
+    }
+  }*/ 
