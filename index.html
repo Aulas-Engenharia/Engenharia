@@ -181,6 +181,31 @@
     </section>
     <section class="contato container" id="contato">
       <h2>Contato</h2>
+        
+      <form method="post" action="enviar.php">
+        <fieldset id="mensagem"><legend>Mensagem</legend>
+          <div class=msg><label for="cNome">Nome:   </label><input type="text" name="nome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"></div>
+          <div class=msg><label for="cEmail">E-mail: </label> <input type="email" name="email" id="cEmail" size="20" maxlength="30" placeholder="E-mail"></div>
+          <div class=msg><label for="cInd">Indicação: </label> <input type="text" name="ind" id="cInd" size="20" maxlength="30" placeholder="Alguem te indicou?"></div>
+          <div class=msg><label for="cDisciplina">Disciplina: </label>
+          <select name="disciplina" id="cDisciplina">
+            <option>Elétrotecnica</option>
+            <option>Estradas</option>
+            <option>Estruturas em Concreto</option>
+            <option>Estruturas Metálicas</option>
+            <option>Hidráulica</option>
+            <option>Programação</option>
+            <option>Softwares</option>
+            <option>Mais Disciplinas</option>
+          </select>
+          </div>
+          <div class=msg><label for="cMsg">Mensagem: </label>
+            <textarea name="msg" id="cMsg" cols="35" rows="4" placeholder="Deixe aqui sua mensagem"></textarea>
+          </div>
+          <input type="submit" name="acao" value="Enviar">
+        </fieldset>
+
+      </form>  
       <div class="grid icons">
         <a target="_blank" href="https://discord.gg/PX7jpVM">
           <i class="fab fa-discord"></i>
