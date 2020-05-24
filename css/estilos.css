@@ -296,6 +296,40 @@ body{
     border-radius:2%;
   }
 
+  .contato form{
+    padding: 20px;
+    margin: 50px;
+    justify-content: center;
+  }
+
+  .contato fieldset{
+    display: center;
+    border-color: rgb(0,0,0,0);
+
+    }
+
+  .msg{
+    display: flex;
+    padding: 5px;
+    font-size: 25px; 
+  }
+
+  .contato label{
+    text-align: right;
+    width: 200px;
+    padding-right: 30px;
+  }
+
+  .contato input{
+    width: 20em;
+  }
+
+  .contato legend{
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+
   .contato .icons{
     text-align: center;
   }
@@ -307,6 +341,23 @@ body{
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
+  input[type=submit]{
+    display: block;
+    background-color: #ccc;
+    height: 35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+
+
 
 
   .contato a:hover {
