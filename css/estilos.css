@@ -112,7 +112,7 @@ body{
     /*se colocar fontsize aqui, o valor fica fixo e o @media nao tem efeito sobre*/
   }
 
-.site-title {
+  .site-title {
     font-size: 3.75em; /*em é uma fonte relativa*/
     font-family: 'Patrick Hand', cursive;
   }
@@ -123,7 +123,7 @@ body{
     }
   }
 
-        
+
   .descricao {
     font-size: 1.5em;
     font-family: 'Patrick Hand', cursive;
@@ -188,10 +188,10 @@ body{
     }
   }
 
-
   .sobre .avatar{
     float: right;
     margin-left: 2em;
+
   }
 
   .img-avatar{
@@ -267,7 +267,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    border-radius:2%;
+    border-radius: 2%;
   }
   
   .card-back{
@@ -293,10 +293,11 @@ body{
     object-position: center;
     /*border-radius: 50%;*/ 
     transform: scale(1);
-    border-radius:2%;
+    border-radius: 2%;
+
   }
 
-  .contato form{
+ /*.contato form{
     padding: 20px;
     margin: 50px;
     justify-content: center;
@@ -330,18 +331,6 @@ body{
   }
 
 
-  .contato .icons{
-    text-align: center;
-  }
-
-  .contato a {
-    color:rgb(23, 0, 87);
-    font-size: 5em;
-    padding: 25px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
   input[type=submit]{
     display: block;
     background-color: #ccc;
@@ -354,9 +343,19 @@ body{
     text-align: center;
     border-radius: 15px;
 }
+*/
+  .contato .icons{
+    text-align: center;
+  }
 
-
-
+  .contato a {
+    color:rgb(23, 0, 87);
+    font-size: 5em;
+    padding: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+  }
 
 
 
@@ -380,6 +379,7 @@ body{
     }
 
     .contato a {
+      margin-top: 20px;
       padding: 10px;
       font-size: 4em;
     }
