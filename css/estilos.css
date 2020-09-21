@@ -1,4 +1,4 @@
-              /*reset do browser, mas existem diferentes formas. Google tem varios*/
+               /*reset do browser, mas existem diferentes formas. Google tem varios*/
 * {            /*o '*' é oo mais fraco dos marcadores, por isso coloca em primeiro e representa todos*/
   margin: 0;   /*ao utilizar o valor 0, eu posso definir para cada elemento o valor*/
   padding: 0;  /*o navegador coloca valores automaticos quando nao definidos*/
@@ -126,9 +126,22 @@ body{
 
   @media (min-width: 400px) {
     .site-title{
+      font-size: 3em;
+    }
+  }
+
+  @media (min-width: 500px) {
+    .site-title{
       font-size: 4em;
     }
   }
+
+  @media (min-width: 700px) {
+    .site-title{
+      font-size: 5em;
+    }
+  }
+
 
   @media (min-width: 900px) {
     .site-title{
@@ -410,10 +423,9 @@ body{
 
   table{
     color: rgb(33,70,138);
-    text-align: center;
+    text-align: left;
     font-size: 1em;
     display: flex;
-    justify-content: center;
     border-collapse: collapse;
   }
 
@@ -426,6 +438,16 @@ body{
     padding: 5px;
   }
 
+  .disciplina { 
+    width: 10vw;
+    text-align: center;
+  }
+
+  th{
+    width: 90vw; 
+    padding: 10px;
+  }
+
   @media (min-width: 400px) {
     table {
       font-size: 1.5em;
@@ -434,10 +456,21 @@ body{
 
   @media (min-width: 600px) {
     table {
+      font-size: 1.73em;
+    }
+  }
+
+  @media (min-width: 800px) {
+    table {
       font-size: 2em;
     }
   }
 
+  
+  table{
+    padding: 15px;
+    table-layout: fixed;
+  }
 
 
   .contato .icons{
@@ -494,3 +527,4 @@ body{
       font-size: 2em;
     }
   }
+
